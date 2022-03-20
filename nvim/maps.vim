@@ -33,9 +33,8 @@ vnoremap <silent> # :<C-U>
 " Open current directory
 nmap te :tabedit 
 nmap tn :tabnew .<CR>
-nmap <Leader>j :tabprev<CR>
-nmap <Leader>l :tabnext<CR>
-nmap <Leader>nt :NERDTreeFind<CR>
+nmap <S-Tab> :tabprev<Return>
+nmap <Tab> :tabnext<Return>
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q <CR>

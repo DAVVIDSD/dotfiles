@@ -151,31 +151,17 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-
 " if exists("&termguicolors") && exists("&winblend")
   syntax enable
   set winblend=0
   set wildoptions=pum
   set pumblend=5
   set background=dark
-  " let g:tokyonight_style = "storm"
-  " let g:tokyonight_italic_functions = 1
-  " let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-  " let g:tokyonight_lualine_bold = 1
-  " let g:tokyonight_transparent = 1
-  " let g:neosolarized_termtrans=1
-  " let g:gruvbox_contrast_light = 'hard'
-  " runtime ./colors/NeoSolarized.vim
-  " Change the "hint" color to the "orange" color, and make the "error" color bright red
-  " let g:tokyonight_colors = {
-  "   \ 'hint': 'orange',
-  "   \ 'error': '#ff0000'
-  " \ }
-
-  colorscheme gruvbox
-
+  let g:neosolarized_termtrans=1
+  runtime ./colors/NeoSolarized.vim
   " Load the colorscheme
-  hi Normal guibg=NONE ctermbg=NONE
+  colorscheme NeoSolarized
+  " hi Normal guibg=NONE ctermbg=NONE
 " endif
 
 "}}}
@@ -210,4 +196,5 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 "}}}
 " vim: set foldmethod=marker foldlevel=0:
+let g:defx_icons_column_length = 3
 endif
