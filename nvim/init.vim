@@ -15,6 +15,7 @@ set number
 syntax enable
 set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
+set mouse=a
 set title
 set nobackup       
 set nowritebackup  
