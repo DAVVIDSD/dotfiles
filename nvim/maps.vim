@@ -50,6 +50,9 @@ nmap <Leader>gj :diffget //2<CR>
 nmap <Leader>gl :diffget //3<CR>
 nmap <Leader>gc :G switch
 
+
+nmap TT :TodoTelescope<CR>
+nmap <Leader>s <Plug>(easymotion-s2)
 "------------------------------
 " Windows
 

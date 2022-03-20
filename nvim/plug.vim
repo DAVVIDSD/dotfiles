@@ -34,10 +34,15 @@ if has("nvim")
   Plug 'easymotion/vim-easymotion'
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'terryma/vim-multiple-cursors'
-  Plug 'kyazdani42/nvim-tree.lua'
-  " Plug 'jose-elias-alvarez/null-ls.nvim'
-  " Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
-  " Plug 'preservim/nerdtree'
+  Plug 'scrooloose/nerdtree'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'morhetz/gruvbox'
+  " Plug 'navarasu/onedark.nvim' 
+  " Plug 'rakr/vim-one'
+  " Plug 'tiagovla/tokyodark.nvim' 
+  " Plug 'sainnhe/gruvbox-material'
+  Plug 'joshdick/onedark.vim'
+
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

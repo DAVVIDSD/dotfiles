@@ -13,6 +13,7 @@ if !1 | finish | endif
 set nocompatible
 set number
 syntax enable
+set noshowmode
 set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
 set mouse=a
@@ -28,8 +29,7 @@ set showcmd
 set cmdheight=1
 set laststatus=2
 set scrolloff=10
-set expandtab
-set nospell
+set showtabline=2
 "let loaded_matchparen = 1
 set shell=fish
 set backupskip=/tmp/*,/private/tmp/*
@@ -137,24 +137,28 @@ runtime ./maps.vim
 let g:defx_icons_column_length = 2
 
 
-" Syntax theme "{{{
+j" Syntax theme "{{{
 " ---------------------------------------------------------------------
-
+"
 " true color
-if exists("&termguicolors") && exists("&winblend")
-  syntax enable
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
-  set winblend=0
-  set wildoptions=pum
-  set pumblend=5
-  set background=dark
-  " Use NeoSolarized
-  let g:neosolarized_termtrans=1
-  runtime ./colors/NeoSolarized.vim
-  colorscheme NeoSolarized
 endif
 
+syntax enable
+set termguicolors
+set winblend=0
+set wildoptions=pum
+set pumblend=5
+set background=dark
+let g:neosolarized_termtrans=1
+colorscheme onedark
+hi Normal guibg=NONE ctermbg=NONE
+
 "}}}
+"
 
 " Extras "{{{
 " ---------------------------------------------------------------------
