@@ -1,47 +1,36 @@
-if exists('g:vscode')
-  runtime ./vscode/settings.vim
-  runtime ./vscode/maps.vim
-else 
-
 " Fundamentals "{{{
 " ---------------------------------------------------------------------
 
 " init autocmd
 autocmd!
 " set script encoding
+" hola como estas esto es una preba
+" y esto es otra prueba
 scriptencoding utf-8
 " stop loading config if it's on tiny or small
 if !1 | finish | endif
 
 set nocompatible
 set number
-set relativenumber
 syntax enable
-set nobackup       
-set nowritebackup  
-set noswapfile
-set mouse=a
 set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
 set title
+set nobackup       
+set nowritebackup  
+set noswapfile
 set autoindent
-set noshowmode
 set background=dark
 set nobackup
 set hlsearch
-set nobackup       
-set nowritebackup  
-set noswapfile  
 set showcmd
 set cmdheight=1
 set laststatus=2
 set scrolloff=10
 set expandtab
-set nospell 
-set showtabline=2
-set updatetime=300
+set nospell
 "let loaded_matchparen = 1
-"set shell=fish
+set shell=fish
 set backupskip=/tmp/*,/private/tmp/*
 
 " incremental substitution (neovim)
@@ -68,6 +57,7 @@ set shiftwidth=4
 set tabstop=4
 set ai "Auto indent
 set si "Smart indent
+set nowrap "No Wrap lines
 set backspace=start,eol,indent
 " Finding files - Search down into subfolders
 set path+=**
@@ -136,78 +126,38 @@ if has("unix")
     runtime ./macos.vim
   endif
 endif
+if has('win32')
+  runtime ./windows.vim
+endif
 
 runtime ./maps.vim
-
-
 "}}}
+
+let g:defx_icons_column_length = 2
+
 
 " Syntax theme "{{{
 " ---------------------------------------------------------------------
 
 " true color
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
-" if exists("&termguicolors") && exists("&winblend")
+if exists("&termguicolors") && exists("&winblend")
   syntax enable
+  set termguicolors
   set winblend=0
   set wildoptions=pum
   set pumblend=5
   set background=dark
-  " let g:tokyonight_style = "storm"
-  " let g:tokyonight_italic_functions = 1
-  " let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-  " let g:tokyonight_lualine_bold = 1
-  " let g:tokyonight_transparent = 1
-  " let g:neosolarized_termtrans=1
-  " let g:gruvbox_contrast_light = 'hard'
-  " runtime ./colors/NeoSolarized.vim
-  " Change the "hint" color to the "orange" color, and make the "error" color bright red
-  " let g:tokyonight_colors = {
-  "   \ 'hint': 'orange',
-  "   \ 'error': '#ff0000'
-  " \ }
-
-  colorscheme gruvbox
-
-  " Load the colorscheme
-  hi Normal guibg=NONE ctermbg=NONE
-" endif
+  " Use NeoSolarized
+  let g:neosolarized_termtrans=1
+  runtime ./colors/NeoSolarized.vim
+  colorscheme NeoSolarized
+endif
 
 "}}}
 
 " Extras "{{{
 " ---------------------------------------------------------------------
 set exrc
-" Override highlight setting.
-" highlight SpelunkerSpellBad cterm=underline ctermfg=247 gui=underline guifg=#9e9e9e
-" highlight SpelunkerComplexOrCompoundWord cterm=underline ctermfg=NONE gui=underline guifg=NONE
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 "}}}
+
 " vim: set foldmethod=marker foldlevel=0:
-endif

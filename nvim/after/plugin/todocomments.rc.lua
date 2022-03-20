@@ -17,7 +17,7 @@ require("todo-comments").setup {
   },
   merge_keywords = true, -- when true, custom keywords will be merged with the defaults
   -- highlighting of the line containing the todo comment
-  -- * before: highlights before the keyword (typically commnt characters)
+  -- * before: highlighs before the keyword (typically commnt characters)
   -- * keyword: highlights of the keyword
   -- * after: highlights after the keyword (todo text)
   highlight = {

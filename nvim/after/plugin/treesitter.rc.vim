@@ -14,19 +14,19 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
     disable = {},
   },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  },
   ensure_installed = {
     "tsx",
+    "toml",
+    "fish",
+    "php",
     "json",
     "yaml",
+    "swift",
     "html",
     "scss"
   },
   autotag = {
-    enable = false,
+    enable = true,
   }
 }
 

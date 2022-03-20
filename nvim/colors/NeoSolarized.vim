@@ -27,7 +27,7 @@
 " Appearance:
 " g:neosolarized_contrast
 " g:neosolarized_diffmode
-" g:neosolarzed_termBoldAsBright
+" g:neosolarized_termBoldAsBright
 " g:neosolarized_termtrans
 " g:neosolarized_vertSplitBgTrans
 " g:neosolarized_visibility
