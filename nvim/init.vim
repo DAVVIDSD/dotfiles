@@ -154,7 +154,7 @@ set wildoptions=pum
 set pumblend=5
 set background=dark
 let g:neosolarized_termtrans=1
-colorscheme onedark
+colorscheme NeoSolarized
 hi Normal guibg=NONE ctermbg=NONE
 
 "}}}

@@ -37,10 +37,6 @@ if has("nvim")
   Plug 'scrooloose/nerdtree'
   Plug 'ryanoasis/vim-devicons'
   Plug 'morhetz/gruvbox'
-  " Plug 'navarasu/onedark.nvim' 
-  " Plug 'rakr/vim-one'
-  " Plug 'tiagovla/tokyodark.nvim' 
-  " Plug 'sainnhe/gruvbox-material'
   Plug 'joshdick/onedark.vim'
 
 endif

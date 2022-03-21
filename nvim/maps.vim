@@ -38,7 +38,7 @@ vnoremap <silent> # :<C-U>
 
 " Open current directory
 nmap te :tabedit 
-nmap tn :<C-u>tabnew <Return>
+nmap tn :tabnew <Return>
 " nnoremap <silent> :<C-u>Defx -listed -resume
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
@@ -70,8 +70,8 @@ map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
 " Resize window
-nmap <C-w><left> <C-w><
-nmap <C-w><right> <C-w>>
-nmap <C-w><up> <C-w>+
-nmap <C-w><down> <C-w>-
+nmap <C-left> <C-w><
+nmap <C-right> <C-w>>
+nmap <C-up> <C-w>+
+nmap <C-down> <C-w>-
 
