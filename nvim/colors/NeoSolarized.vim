@@ -27,7 +27,7 @@
 " Appearance:
 " g:neosolarized_contrast
 " g:neosolarized_diffmode
-" g:neosolarzed_termBoldAsBright
+" g:neosolarized_termBoldAsBright
 " g:neosolarized_termtrans
 " g:neosolarized_vertSplitBgTrans
 " g:neosolarized_visibility
@@ -144,12 +144,13 @@ let colors_name = "NeoSolarized"
 " Set gui and terminal at the same time.
     let s:gui_mode       = "gui"
     let s:gui_base03      = "#002b36"
-    let s:gui_base02      = "#073642"
+    let s:gui_base02      = "#1a1b26"
     let s:gui_base01      = "#586e75"
     let s:gui_base00      = "#657b83"
     let s:gui_base0       = "#839496"
     let s:gui_base1       = "#93a1a1"
     let s:gui_base2       = "#eee8d5"
+	let s:gui_darked      = "#1F2335"
     let s:gui_base3       = "#fdf6e3"
     let s:gui_yellow      = "#b58900"
     let s:gui_orange      = "#cb4b16"
@@ -159,6 +160,7 @@ let colors_name = "NeoSolarized"
     let s:gui_blue        = "#268bd2"
     let s:gui_cyan        = "#2aa198"
     let s:gui_green       = "#719e07" "experimental
+	let s:gui_test        = "FF5733"
     "let s:green       = "#859900" "original
 
     let s:term_mode       = "cterm"
@@ -169,6 +171,7 @@ let colors_name = "NeoSolarized"
     let s:term_base0       = "12"
     let s:term_base1       = "14"
     let s:term_base2       = "7"
+	let s:term_darked      = "0"
     let s:term_base3       = "15"
     let s:term_yellow      = "3"
     let s:term_orange      = "9"
@@ -311,6 +314,8 @@ exe "let s:bg_magenta   = ' "   .   "guibg=".s:gui_magenta  .   " ctermbg=".s:te
 exe "let s:bg_violet    = ' "   .   "guibg=".s:gui_violet   .   " ctermbg=".s:term_violet    .   "'"
 exe "let s:bg_blue      = ' "   .   "guibg=".s:gui_blue     .   " ctermbg=".s:term_blue      .   "'"
 exe "let s:bg_cyan      = ' "   .   "guibg=".s:gui_cyan     .   " ctermbg=".s:term_cyan      .   "'"
+exe "let s:bg_darked    = ' "   .   "guibg=".s:gui_darked   .   " ctermbg=".s:term_darked    .   "'"
+
 
 exe "let s:fg_none      = ' "   .   "guifg=".s:gui_none     .   " ctermfg=".s:term_none      .   "'"
 exe "let s:fg_back      = ' "   .   "guifg=".s:gui_back     .   " ctermfg=".s:term_back      .   "'"
@@ -479,7 +484,7 @@ exe "hi! IncSearch"      .s:fmt_stnd   .s:fg_orange .s:bg_none
 exe "hi! Search"         .s:fmt_revr   .s:fg_yellow .s:bg_none
 exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
-exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02
+exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_none
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
 if (g:neosolarized_vertSplitBgTrans == 1)
     exe "hi! VertSplit"  .s:fmt_none   .s:fg_base00 .s:bg_none
@@ -521,13 +526,13 @@ exe "hi! PmenuSel"       .s:fmt_none   .s:fg_base01 .s:bg_base2   .s:fmt_revbb
 exe "hi! PmenuSbar"      .s:fmt_none   .s:fg_base2  .s:bg_base0   .s:fmt_revbb
 exe "hi! PmenuThumb"     .s:fmt_none   .s:fg_base0  .s:bg_base03  .s:fmt_revbb
 exe "hi! TabLine"        .s:fmt_none   .s:fg_base0  .s:bg_base02  .s:sp_base0
-exe "hi! TabLineFill"    .s:fmt_none   .s:fg_base0  .s:bg_base02  .s:sp_base0
+exe "hi! TabLineFill"    .s:fmt_none   .s:fg_base0  .s:bg_none  .s:sp_base0
 exe "hi! TabLineSel"     .s:fmt_none   .s:fg_base01 .s:bg_base2   .s:sp_base0  .s:fmt_revr
 exe "hi! TabLineSep"     .s:fmt_none   .s:fg_base02 .s:bg_base01  .s:sp_base0  .s:fmt_revr
 exe "hi! TabLineSep2"    .s:fmt_none   .s:fg_base02 .s:bg_base01  .s:sp_base0
 exe "hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base02
-exe "hi! CursorLine"     .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1
-exe "hi! CursorLineNr"   .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1
+exe "hi! CursorLine"     .s:fmt_uopt   .s:fg_none   .s:bg_darked  .s:sp_base1
+exe "hi! CursorLineNr"   .s:fmt_uopt   .s:fg_none   .s:bg_none  .s:sp_base1
 exe "hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base02
 exe "hi! Cursor"         .s:fmt_none   .s:fg_base03 .s:bg_base0
 hi! link lCursor Cursor

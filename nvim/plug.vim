@@ -1,4 +1,3 @@
-
 if has("nvim")
   let g:plug_home = stdpath('data') . '/plugged'
 endif
@@ -28,10 +27,11 @@ if has("nvim")
   Plug 'numToStr/Comment.nvim' 
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
   Plug 'folke/todo-comments.nvim'
-  Plug 'tiagovla/tokyodark.nvim'
+  " Plug 'tiagovla/tokyodark.nvim'
   Plug 'kristijanhusak/defx-git'
   Plug 'kristijanhusak/defx-icons'
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
