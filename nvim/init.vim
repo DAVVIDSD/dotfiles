@@ -41,7 +41,7 @@ set nospell
 set showtabline=2
 set updatetime=300
 "let loaded_matchparen = 1
-"set shell=fish
+set shell=fish
 set backupskip=/tmp/*,/private/tmp/*
 
 " incremental substitution (neovim)
@@ -68,6 +68,7 @@ set shiftwidth=4
 set tabstop=4
 set ai "Auto indent
 set si "Smart indent
+set nowrap "No Wrap lines
 set backspace=start,eol,indent
 " Finding files - Search down into subfolders
 set path+=**

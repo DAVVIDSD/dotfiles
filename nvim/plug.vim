@@ -27,7 +27,6 @@ if has("nvim")
   Plug 'numToStr/Comment.nvim' 
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
   Plug 'folke/todo-comments.nvim'
-  " Plug 'tiagovla/tokyodark.nvim'
   Plug 'kristijanhusak/defx-git'
   Plug 'kristijanhusak/defx-icons'
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
