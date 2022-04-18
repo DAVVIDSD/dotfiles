@@ -15,7 +15,7 @@ if !1 | finish | endif
 
 set nocompatible
 set number
-"set relativenumber
+set relativenumber
 syntax enable
 set nobackup       
 set nowritebackup  
