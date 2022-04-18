@@ -31,6 +31,7 @@ if has("nvim")
   Plug 'kristijanhusak/defx-icons'
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+  Plug 'sheerun/vim-polyglot'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
