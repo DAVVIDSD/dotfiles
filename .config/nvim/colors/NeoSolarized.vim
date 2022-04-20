@@ -1,44 +1,4 @@
-" Name:     NeoSolarized: Colorscheme for truecolor vim
-" Author:   iCyMind <icyminnd@gmail.com>
-" URL:      https://github.com/iCyMind/NeoSolarized
-" License:  MIT
-" Modified: Wed Jun 12 18:41:42 PDT 2016
 
-" Usage "{{{
-"
-" ---------------------------------------------------------------------
-" ABOUT:
-" ---------------------------------------------------------------------
-" Solarized is a carefully designed selective contrast colorscheme with dual
-" light and dark modes that runs in both GUI, 256 and 16 color modes.
-"
-" But the origin solarized does not support truecolor terminal. NeoSolarized
-" is a fixed colorscheme for neovim/vim which running in truecolor supported
-" terminal.
-"
-" ---------------------------------------------------------------------
-" OPTIONS:
-" ---------------------------------------------------------------------
-" Font styles:
-" g:neosolarized_bold
-" g:neosolarized_italic
-" g:neosolarized_underline
-"
-" Appearance:
-" g:neosolarized_contrast
-" g:neosolarized_diffmode
-" g:neosolarized_termBoldAsBright
-" g:neosolarized_termtrans
-" g:neosolarized_vertSplitBgTrans
-" g:neosolarized_visibility
-"
-" ---------------------------------------------------------------------
-" INSTALLATION:
-" ---------------------------------------------------------------------
-" move the NeoSolarized.vim to your VIMRUNTIME by manual or plugin manager
-"
-" MODIFY VIMRC:
-"
 " After either Option 1 or Option 2 above, put the following two lines in your
 " .vimrc:
 "
@@ -940,7 +900,7 @@ autocmd GUIEnter * if (has('gui_running')) | exe "colorscheme " . g:colors_name 
 " copies of the Software, and to permit persons to whom the Software is
 " furnished to do so, subject to the following conditions:
 "
-" The above copyright notice and this permission notice shall be included in
+" The above copyright notice and this permission not
 " all copies or substantial portions of the Software.
 "
 " THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
