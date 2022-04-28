@@ -14,7 +14,7 @@ alias next="npm run dev"
 alias home='$HOME'
 alias rzsh='source .zshrc'
 alias rtmux='tmux source .tmux.conf'
-alias v='nvim'
+alias vim='nvim'
 alias q='tmux kill-serve'
 
 # Theme

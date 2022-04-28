@@ -9,6 +9,7 @@ saga.init_lsp_saga {
   hint_sign = '',
   infor_sign = '',
   border_style = "round",
+  code_action_prompt = { enable = false }
 }
 
 EOF

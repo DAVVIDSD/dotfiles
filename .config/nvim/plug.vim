@@ -32,7 +32,19 @@ if has("nvim")
   Plug 'numToStr/Comment.nvim'
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
   Plug 'tpope/vim-surround'
-
+  Plug 'sainnhe/gruvbox-material'
+  Plug 'cocopon/iceberg.vim'
+  Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+  Plug 'wuelnerdotexe/vim-enfocado'
+  Plug 'mhartington/oceanic-next'
+  Plug 'olimorris/onedarkpro.nvim'
+  Plug 'morhetz/gruvbox'
+  Plug 'Yggdroot/indentLine'
+  Plug 'hrsh7th/cmp-vsnip'
+  Plug 'hrsh7th/vim-vsnip'
+  " Plug 'hrsh7th/vim-vsnip-integ'
+  Plug 'rafamadriz/friendly-snippets'
+  " Plug 'lukas-reineke/indent-blankline.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

@@ -82,7 +82,7 @@ nvim_lsp.flow.setup {
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", 'javascript',  'javascriptreact', 'javascript.jsx' },
   capabilities = capabilities
 }
 
@@ -103,8 +103,8 @@ nvim_lsp.diagnosticls.setup {
           column = 'column',
           endLine = 'endLine',
           endColumn = 'endColumn',
-          message = '[eslint] ${message} [${ruleId}]',
-          security = 'severity'
+          message = '${message}',
+          isStdout =  false,
         },
         securities = {
           [2] = 'error',
@@ -126,8 +126,9 @@ nvim_lsp.diagnosticls.setup {
         rootPatterns = { '.git' },
       },
       prettier = {
-        command = 'prettier',
+        command = 'prettier_d_slim',
         rootPatterns = { '.git' },
+        -- requiredFiles: { 'prettier.config.js' },
         args = { '--stdin', '--stdin-filepath', '%filename' }
       }
     },
@@ -153,6 +154,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
-vim.o.updatetime = 250
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+ vim.o.updatetime = 250
+ vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 EOF

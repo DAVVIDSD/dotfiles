@@ -1,4 +1,4 @@
-" Fundamentals "{{{
+
 " ---------------------------------------------------------------------
 
 " init autocmd
@@ -10,6 +10,7 @@ if !1 | finish | endif
 
 set nocompatible
 set number
+set relativenumber
 syntax enable
 set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
@@ -71,24 +72,20 @@ set formatoptions+=r
 
 " Highlights "{{{
 " ---------------------------------------------------------------------
-set cursorline
-"set cursorcolumn
 
 " Set cursor line color on visual mode
-highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
 
-highlight LineNr cterm=none ctermfg=240 guifg=#2b506e guibg=#000000
 
-augroup BgHighlight
-  autocmd!
-  autocmd WinEnter * set cul
-  autocmd WinLeave * set nocul
-augroup END
-
-if &term =~ "screen"
-  autocmd BufEnter * if bufname("") !~ "^?[A-Za-z0-9?]*://" | silent! exe '!echo -n "\ek[`hostname`:`basename $PWD`/`basename %`]\e\\"' | endif
-  autocmd VimLeave * silent!  exe '!echo -n "\ek[`hostname`:`basename $PWD`]\e\\"'
-endif
+" augroup BgHighlight
+"   autocmd!
+"   autocmd WinEnter * set cul
+"   autocmd WinLeave * set nocul
+" augroup END
+"
+" if &term =~ "screen"
+"   autocmd BufEnter * if bufname("") !~ "^?[A-Za-z0-9?]*://" | silent! exe '!echo -n "\ek[`hostname`:`basename $PWD`/`basename %`]\e\\"' | endif
+"   autocmd VimLeave * silent!  exe '!echo -n "\ek[`hostname`:`basename $PWD`]\e\\"'
+" endif
 
 "}}}
 
@@ -147,8 +144,17 @@ if exists("&termguicolors") && exists("&winblend")
   set background=dark
   " Use NeoSolarized
   let g:neosolarized_termtrans=1
-  runtime ./colors/NeoSolarized.vim
-  colorscheme NeoSolarized
+  let g:gruvbox_material_background = 'hard'
+  let g:enfocado_style = 'neon'
+  " runtime ./colors/NeoSolarized.vim
+  "
+  let g:gruvbox_contrast_dark = 'hard'
+  let g:gruvbox_sign_column = 'bg0'
+  let g:gruvbox_italic = 1
+
+  let g:gruvbox_bold = 0
+  colorscheme gruvbox
+
 endif
 
 "}}}
@@ -163,16 +169,15 @@ let g:defx_icons_column_length = 3
 autocmd BufEnter,VimEnter,BufNew,BufWinEnter,BufRead,BufCreate
           \ * if isdirectory(expand('<amatch>'))
           \   | call s:browse_check(expand('<amatch>')) | endif
-
     function! s:browse_check(path) abort
       if bufnr('%') != expand('<abuf>')
         return
       endif
-
       " Disable netrw.
       augroup FileExplorer
         autocmd!
       augroup END
-
       execute 'Defx -listed -resume -columns=indent:mark:icon:icons:filename:git:size' a:path
 endfunction
+
+let g:indentLine_char = "▏"
