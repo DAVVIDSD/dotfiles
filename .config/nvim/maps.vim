@@ -50,7 +50,9 @@ nmap <Leader>gc :G commit -m
 nmap <Leader>gp :G push origin
 nmap <Leader>gu :G pull origin
 
-
+" nnoremap <leader>SF viw:lua require('spectre').open_file_search()<cr>
+" nnoremap <leader>SW <cmd>lua require('spectre').open_visual({select_word=true})<CR>
+" nnoremap <leader>S <cmd>lua require('spectre').open()<CR>
 
 "------------------------------
 " PLUG VIM
