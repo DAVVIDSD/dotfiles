@@ -32,12 +32,7 @@ if has("nvim")
   Plug 'numToStr/Comment.nvim'
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
   Plug 'tpope/vim-surround'
-  " Plug 'sainnhe/gruvbox-material'
-  " Plug 'cocopon/iceberg.vim'
   Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-  " Plug 'wuelnerdotexe/vim-enfocado'
-  " Plug 'mhartington/oceanic-next'
-  " Plug 'olimorris/onedarkpro.nvim'
   Plug 'morhetz/gruvbox'
   Plug 'Yggdroot/indentLine'
   Plug 'hrsh7th/cmp-vsnip'
@@ -46,6 +41,7 @@ if has("nvim")
   Plug 'sheerun/vim-polyglot'
   Plug 'dyng/ctrlsf.vim'
   Plug 'lewis6991/gitsigns.nvim'
+  Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
