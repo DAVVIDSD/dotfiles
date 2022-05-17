@@ -17,6 +17,7 @@ set nocompatible
 set number
 set relativenumber
 syntax enable
+set cc=130
 set nobackup       
 set nowritebackup  
 set noswapfile
@@ -161,7 +162,13 @@ endif
   let g:neosolarized_termtrans=1
   runtime ./colors/NeoSolarized.vim
   " Load the colorscheme
-  colorscheme NeoSolarized
+  let g:gruvbox_contrast_dark = 'hard'
+  let g:gruvbox_contrast_light = 'soft'
+  let g:gruvbox_sign_column = 'bg0'
+  let g:gruvbox_italic = 1
+  let g:gruvbox_bold = 1
+
+  colorscheme nord
   " hi Normal guibg=NONE ctermbg=NONE
 " endif
 
@@ -198,4 +205,19 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 "}}}
 " vim: set foldmethod=marker foldlevel=0:
 let g:defx_icons_column_length = 3
+let g:indentLine_char = "▏"
+
+autocmd BufEnter,VimEnter,BufNew,BufWinEnter,BufRead,BufCreate
+          \ * if isdirectory(expand('<amatch>'))
+          \   | call s:browse_check(expand('<amatch>')) | endif
+    function! s:browse_check(path) abort
+      if bufnr('%') != expand('<abuf>')
+        return
+      endif
+      " Disable netrw.
+      augroup FileExplorer
+        autocmd!
+      augroup END
+      execute 'Defx -listed -resume -columns=indent:mark:icon:icons:filename:git:size' a:path
+endfunction
 endif

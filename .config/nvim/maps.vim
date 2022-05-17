@@ -33,24 +33,22 @@ vnoremap <silent> # :<C-U>
 " Open current directory
 nmap te :tabedit 
 nmap tn :tabnew .<CR>
-nmap <S-Tab> :tabprev<Return>
-nmap <Tab> :tabnext<Return>
+nmap H :tabprev<Return>
+nmap L :tabnext<Return>
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q <CR>
 nmap <Leader>e :wq <CR>
-"map  / <Plug>(easymotion-sn)
-"omap / <Plug>(easymotion-tn)
-" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
-" Without these mappings, `n` & `N` works fine. (These mappings just provide
-" different highlight method and have some other features )
 
 "------------------------------
 " GIT FUGITIVE
 nmap <Leader>gs :G <CR>
 nmap <Leader>gj :diffget //2<CR>
 nmap <Leader>gl :diffget //3<CR>
-nmap <Leader>gc :G switch 
+nmap <Leader>gb :G switch 
+nmap <Leader>gc :G commit -m  
+nmap <Leader>gp :G push origin
+nmap <Leader>gu :G pull origin
 
 "------------------------------
 " PLUG VIM
@@ -70,14 +68,14 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>ac <Plug>(coc-codeaction)
+nmap <leader>ca <Plug>(coc-codeaction)
 nmap <leader>cf <Plug>(coc-fix-current)
 nmap K :call CocActionAsync('doHover')<CR>
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format)
-nmap <leader>cd :CocDiagnostic <CR>
+nmap <leader>a :CocDiagnostic <CR>
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :

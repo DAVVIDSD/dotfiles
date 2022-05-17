@@ -19,11 +19,9 @@ if has("nvim")
   Plug 'terryma/vim-multiple-cursors'
   Plug 'easymotion/vim-easymotion'
   Plug 'ryanoasis/vim-devicons'
-  Plug 'scrooloose/nerdtree'
   Plug 'morhetz/gruvbox'
   Plug 'shaunsingh/solarized.nvim'
   Plug 'lewis6991/gitsigns.nvim'
-  Plug 'akinsho/toggleterm.nvim'
   Plug 'numToStr/Comment.nvim' 
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
   Plug 'folke/todo-comments.nvim'
@@ -32,6 +30,13 @@ if has("nvim")
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'sheerun/vim-polyglot'
+  Plug 'Yggdroot/indentLine'
+  Plug 'kyazdani42/nvim-web-devicons'
+  " Plug 'navarasu/onedark.nvim'
+  Plug 'joshdick/onedark.vim'
+  Plug 'shaunsingh/nord.nvim'
+  
+
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
