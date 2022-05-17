@@ -5,6 +5,8 @@ fi
 # Paths 
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$HOME/.local/bin:$PATH
+export VISUAL=nvim
+export EDITOR=nvim
 
 
 # Aliases
@@ -14,8 +16,14 @@ alias next="npm run dev"
 alias home='$HOME'
 alias rzsh='source .zshrc'
 alias rtmux='tmux source .tmux.conf'
-alias v='nvim'
+alias vim='nvim'
+alias v='nvim $(fzf)'
 alias q='tmux kill-serve'
+alias f='ranger'
+alias vz='vim ~/.zshrc'
+alias vconfig='ranger ~/dotfiles'
+bindkey -s '^f' 'ranger^M'
+bindkey -s '^v' 'nvim $(fzf)^M' 
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
