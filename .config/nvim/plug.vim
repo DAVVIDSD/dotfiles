@@ -42,6 +42,7 @@ if has("nvim")
   Plug 'dyng/ctrlsf.vim'
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+  Plug 'shaunsingh/nord.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

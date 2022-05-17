@@ -141,21 +141,10 @@ if exists("&termguicolors") && exists("&winblend")
   set winblend=0
   set wildoptions=pum
   set pumblend=5
-  set background=light
-  " Use NeoSolarized
-  let g:neosolarized_termtrans=1
-  let g:gruvbox_material_background = 'hard'
-  let g:enfocado_style = 'neon'
-  " runtime ./colors/NeoSolarized.vim
-  "
-  let g:gruvbox_contrast_dark = 'hard'
-  let g:gruvbox_contrast_light = 'soft'
-  let g:gruvbox_sign_column = 'bg0'
-  let g:gruvbox_italic = 1
-
+  set background=dark
   let g:gruvbox_bold = 1
-  colorscheme gruvbox
-
+  let g:nord_italic = v:false
+  colorscheme nord
 endif
 
 "}}}
