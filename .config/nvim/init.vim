@@ -17,7 +17,7 @@ set nocompatible
 set number
 set relativenumber
 syntax enable
-set cc=130
+set cc=140
 set nobackup       
 set nowritebackup  
 set noswapfile
@@ -41,6 +41,7 @@ set expandtab
 set nospell 
 set showtabline=2
 set updatetime=300
+set cursorline
 "let loaded_matchparen = 1
 set shell=zsh
 set backupskip=/tmp/*,/private/tmp/*
@@ -65,8 +66,8 @@ set ignorecase
 set smarttab
 " indents
 filetype plugin indent on
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set ai "Auto indent
 set si "Smart indent
 set nowrap "No Wrap lines
@@ -199,17 +200,17 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 let g:defx_icons_column_length = 3
 let g:indentLine_char = "▏"
 
-autocmd BufEnter,VimEnter,BufNew,BufWinEnter,BufRead,BufCreate
-          \ * if isdirectory(expand('<amatch>'))
-          \   | call s:browse_check(expand('<amatch>')) | endif
-    function! s:browse_check(path) abort
-      if bufnr('%') != expand('<abuf>')
-        return
-      endif
-      " Disable netrw.
-      augroup FileExplorer
-        autocmd!
-      augroup END
-      execute 'Defx -listed -resume -columns=indent:mark:icon:icons:filename:git:size' a:path
-endfunction
+" autocmd BufEnter,VimEnter,BufNew,BufWinEnter,BufRead,BufCreate
+"           \ * if isdirectory(expand('<amatch>'))
+"           \   | call s:browse_check(expand('<amatch>')) | endif
+"     function! s:browse_check(path) abort
+"       if bufnr('%') != expand('<abuf>')
+"         return
+"       endif
+"       " Disable netrw.
+"       augroup FileExplorer
+"         autocmd!
+"       augroup END
+"       execute 'Defx -listed -resume -columns=indent:mark:icon:icons:filename:git:size' a:path
+" endfunction
 endif

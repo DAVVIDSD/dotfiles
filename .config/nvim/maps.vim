@@ -54,6 +54,7 @@ nmap <Leader>gu :G pull origin
 " PLUG VIM
 nmap <Leader>PI :PlugInstall<CR>
 nmap <Leader>PC :PlugInstall<CR>
+nmap <Leader>nt :NERDTreeFind<CR>
 
 "------------------------------
 " PLUG VIM
@@ -87,22 +88,13 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-" Use <c-space> to trigger completion.
 if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" nmap <expr> <silent> <C-d> <SID>select_current_word()
-" function! s:select_current_word()
-"   if !get(b:, 'coc_cursors_activated', 0)
-"     return "\<Plug>(coc-cursors-word)"
-"   endif
-"   return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
-" endfunc
+          \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 "------------------------------
 
@@ -117,9 +109,6 @@ map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
 " Resize window
-nmap <C-s><left> <C-s><
-nmap <C-w><right> <C-w>>
-nmap <C-w><up> <C-w>+
-nmap <C-w><down> <C-w>-
-"nnoremap <silent>ÑÑ :vertical resize +30<CR>
-"nnoremap <silent>LL :vertical resize -30<CR>
+nnoremap <Leader>h 10<C-w>>
+nnoremap <Leader>l 10<C-w><
+
