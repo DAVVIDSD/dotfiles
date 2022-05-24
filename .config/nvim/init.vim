@@ -41,7 +41,6 @@ set expandtab
 set nospell 
 set showtabline=2
 set updatetime=300
-"let loaded_matchparen = 1
 set shell=zsh
 set backupskip=/tmp/*,/private/tmp/*
 
@@ -136,8 +135,6 @@ if has("unix")
 endif
 
 runtime ./maps.vim
-
-
 "}}}
 
 " Syntax theme "{{{
@@ -154,14 +151,7 @@ endif
   set wildoptions=pum
   set pumblend=5
   set background=dark
-  let g:neosolarized_termtrans=1
-  runtime ./colors/NeoSolarized.vim
   " Load the colorscheme
-  let g:gruvbox_contrast_dark = 'hard'
-  let g:gruvbox_contrast_light = 'soft'
-  let g:gruvbox_sign_column = 'bg0'
-  let g:gruvbox_italic = 1
-  let g:gruvbox_bold = 1
   let g:nord_italic = v:false
   colorscheme nord
 "}}}
@@ -196,20 +186,6 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 "}}}
 " vim: set foldmethod=marker foldlevel=0:
-let g:defx_icons_column_length = 3
 let g:indentLine_char = "▏"
 
-autocmd BufEnter,VimEnter,BufNew,BufWinEnter,BufRead,BufCreate
-          \ * if isdirectory(expand('<amatch>'))
-          \   | call s:browse_check(expand('<amatch>')) | endif
-    function! s:browse_check(path) abort
-      if bufnr('%') != expand('<abuf>')
-        return
-      endif
-      " Disable netrw.
-      augroup FileExplorer
-        autocmd!
-      augroup END
-      execute 'Defx -listed -resume -columns=indent:mark:icon:icons:filename:git:size' a:path
-endfunction
 endif

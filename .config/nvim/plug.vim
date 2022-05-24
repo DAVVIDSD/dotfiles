@@ -10,7 +10,6 @@ Plug 'tpope/vim-rhubarb'
 if has("nvim")
   Plug 'hoob3rt/lualine.nvim'
   Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'tpope/vim-surround'
   Plug 'terryma/vim-multiple-cursors'
@@ -20,5 +19,7 @@ if has("nvim")
   Plug 'sheerun/vim-polyglot'
   Plug 'Yggdroot/indentLine'
   Plug 'shaunsingh/nord.nvim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 endif
 call plug#end()
