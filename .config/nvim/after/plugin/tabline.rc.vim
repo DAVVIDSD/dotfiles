@@ -46,5 +46,3 @@ endfunction
 
 set tabline=%!MyTabLine()
 
-
-
