@@ -32,11 +32,10 @@ if has("nvim")
   Plug 'sheerun/vim-polyglot'
   Plug 'Yggdroot/indentLine'
   Plug 'kyazdani42/nvim-web-devicons'
-  " Plug 'navarasu/onedark.nvim'
   Plug 'joshdick/onedark.vim'
   Plug 'shaunsingh/nord.nvim'
-  
-
+  " Plug 'folke/zen-mode.nvim'
+  Plug 'karb94/neoscroll.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

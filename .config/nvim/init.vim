@@ -85,12 +85,8 @@ set formatoptions+=r
 
 " Highlights "{{{
 " ---------------------------------------------------------------------
-set cursorline
-"set cursorcolumn
-
 " Set cursor line color on visual mode
 highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
-
 highlight LineNr cterm=none ctermfg=240 guifg=#2b506e guibg=#000000
 
 augroup BgHighlight
@@ -153,7 +149,6 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-" if exists("&termguicolors") && exists("&winblend")
   syntax enable
   set winblend=0
   set wildoptions=pum
@@ -167,11 +162,8 @@ endif
   let g:gruvbox_sign_column = 'bg0'
   let g:gruvbox_italic = 1
   let g:gruvbox_bold = 1
-
+  let g:nord_italic = v:false
   colorscheme nord
-  " hi Normal guibg=NONE ctermbg=NONE
-" endif
-
 "}}}
 
 " Extras "{{{
