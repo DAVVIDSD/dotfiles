@@ -1,11 +1,13 @@
 if !exists('g:loaded_telescope') | finish | endif
 
-nnoremap  <silent> ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap  <silent> ;f <cmd>lua require('telescope.builtin').git_files()<cr>
-nnoremap  <silent> fr <cmd>lua require('telescope.builtin').live_grep({grep_open_files=true})<cr>
-nnoremap  <silent> fb <cmd>lua require('telescope.builtin').file_browser()<cr>
-nnoremap <silent> tb <cmd>Telescope buffers<cr>
-nnoremap <silent> ;; <cmd>Telescope help_tags<cr>
+nnoremap <silent> ;f <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <silent> ;r <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <silent> \\ <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <silent> ;t <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <silent> ;; <cmd>lua require('telescope.builtin').resume()<cr>
+nnoremap <silent> ;e <cmd>lua require('telescope.builtin').diagnostics()<cr>
+nnoremap <silent> ;b <cmd>lua require('telescope.builtin').git_branches()<cr>
+
 
 lua << EOF
 function telescope_buffer_dir()

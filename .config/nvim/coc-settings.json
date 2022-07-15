@@ -7,7 +7,7 @@
   "diagnostic.virtualText": false,
   "diagnostic.virtualTextCurrentLineOnly": false,
   "suggest.completionItemKindLabels": {
-    "keyword":  "\uf1de", //  sliders
+    "keyword": "\uf1de", //  sliders
     "variable": "\ue79b", //  isometric box
     "value": "\uf89f", //  digits 123
     "operator": "\u03a8", // Ψ greek letter psi
@@ -33,5 +33,6 @@
     "snippet": "\ue60b", //  pair of curly braces
     "typeParameter": "\uf728", //  file presentation box
     "default": "\uf29c" //  question mark in circle
-    }
+  }
 }
+
