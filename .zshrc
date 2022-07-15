@@ -4,6 +4,9 @@ fi
 
 # Paths 
 export ZSH="$HOME/.oh-my-zsh"
+bindkey -s '^f' 'ranger^M'
+bindkey -s '^v' 'nvim $(fzf)^M' 
+bindkey -s '^g' 'lazygit^M' 
 export PATH=$HOME/.local/bin:$PATH
 export VISUAL=nvim
 export EDITOR=nvim
@@ -21,12 +24,20 @@ alias v='nvim $(fzf)'
 alias q='tmux kill-serve'
 alias f='ranger'
 alias vz='vim ~/.zshrc'
-alias vconfig='ranger ~/dotfiles'
-bindkey -s '^f' 'ranger^M'
-bindkey -s '^v' 'nvim $(fzf)^M' 
+alias vconfig='ranger ~/.config/nvim'
+alias gl='lazygit'
+alias t='tmux attach || tmux new -s 1'
+
+
 
 # Theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="spaceship"
+
+section_mysection() {
+  SPACESHIP_PROMPT_ADD_NEWLINE:false
+}
+
 
 # Plugins
 plugins=(
@@ -37,7 +48,11 @@ plugins=(
     fzf-zsh-plugin
 )
 
+eval "$(starship init zsh)"
+
 source $ZSH/oh-my-zsh.sh
+
+
 
 #NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"

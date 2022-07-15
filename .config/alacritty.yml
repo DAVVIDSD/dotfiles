@@ -6,7 +6,7 @@ window:
     x: 8
     y: 5
 
-  opacity: 0.94
+  opacity: 1
   decorations: buttonless
 
 font:
@@ -26,7 +26,7 @@ font:
 
   offset:
     x: 1
-    y: 2
+    y: 10
 
   use_thin_strokes: false
 
@@ -38,34 +38,34 @@ mouse:
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
-# Colors (Solarized Dark)
 colors:
-  # Default colors
+    # Default colors
   primary:
-    background: '0x00141c'
-    foreground: '0x839496'
-
-  # Normal colors
+    background: '0x11121d'
+    foreground: '0xa9b1d6'
+  cursor:
+    cursor: '0xa9b1d6'
+    # Normal colors
   normal:
-    black:   '0x073642'
-    red:     '0xdc322f'
-    green:   '0x859900'
-    yellow:  '0xb58900'
-    blue:    '0x268bd2'
-    magenta: '0xd33682'
-    cyan:    '0x2aa198'
-    white:   '0xeee8d5'
+    black:   '0x32344a'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xad8ee6'
+    cyan:    '0x449dab'
+    white:   '0x9699a8'
 
-  # Bright colors
+    # Bright colors
   bright:
-    black:   '0x06596d'
-    red:     '0xcb4b16'
-    green:   '0x586e75'
-    yellow:  '0x657b83'
-    blue:    '0x839496'
-    magenta: '0x6c71c4'
-    cyan:    '0x93a1a1'
-    white:   '0xfdf6e3'
+    black:   '0x444b6a'
+    red:     '0xff7a93'
+    green:   '0xb9f27c'
+    yellow:  '0xff9e64'
+    blue:    '0x7da6ff'
+    magenta: '0xbb9af7'
+    cyan:    '0x0db9d7'
+    white:   '0xacb0d0'
 
 shell:
   program: /usr/local/bin/tmux
@@ -81,8 +81,8 @@ key_bindings:
   - { key: W,     mods: Command,       chars: "\x02\x78" }
   - { key: D,     mods: Command,       chars: "\x02\x25" }
   - { key: D,     mods: Command|Shift, chars: "\x02\x22" }
-  - { key: N,     mods: Command,       chars: "\x02\x6e" }
-  - { key: P,     mods: Command,       chars: "\x02\x70" }
+  - { key: P,     mods: Command,       chars: "\x02\x6e" }
+  - { key: N,     mods: Command,       chars: "\x02\x70" }
   - { key: H,     mods: Shift|Command, chars: "\x02\x48" }
   - { key: L,     mods: Shift|Command, chars: "\x02\x4c" }
   - { key: K,     mods: Shift|Command, chars: "\x02\x5b" }
@@ -91,12 +91,4 @@ key_bindings:
   - { key: L,     mods: Option,       chars: "\x02\x6c" }
   - { key: K,     mods: Option,       chars: "\x02\x6b" }
   - { key: J,     mods: Option,       chars: "\x02\x6a" }
-
-
-
-
-
-
-
-
 
