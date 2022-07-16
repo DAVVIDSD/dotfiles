@@ -26,7 +26,6 @@ if has("nvim")
  Plug 'tiagovla/tokyodark.nvim'
  Plug 'kdheepak/lazygit.nvim'
  Plug 'preservim/tagbar'
- Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 endif
 
 call plug#end()

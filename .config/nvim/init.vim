@@ -37,6 +37,8 @@ runtime ./maps.vim
 
 "-------COLORSCHEME-------"
 let g:tokyodark_enable_italic = 0
+let g:tokyodark_enable_italic_comment = 0
+
 
 colorscheme tokyodark
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
